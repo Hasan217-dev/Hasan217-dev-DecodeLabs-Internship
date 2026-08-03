@@ -1,11 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter &amp; Verse — Neighborhood Book Circle</title>
+<meta name="description" content="Borrow, swap, and discuss books with readers on your street.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Industril Training Kit</h2>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Chapter and Verse home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="30" height="30">
+          <path d="M4 6 C4 4 6 3 8 3 L15 3 L15 27 L8 27 C6 27 4 26 4 24 Z" fill="var(--mocha)"/>
+          <path d="M28 6 C28 4 26 3 24 3 L17 3 L17 27 L24 27 C26 27 28 26 28 24 Z" fill="var(--blue)"/>
+        </svg>
+      </span>
+      <span class="brand-text">Chapter <em>&amp;</em> Verse</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav id="primaryNav" class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#shelf">This week's shelf</a></li>
+        <li><a href="#circles">Reading circles</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta" href="#join">Join the circle</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <p class="eyebrow">Greater Lucknow &middot; est. 2026</p>
+      <h1>A shelf that belongs<br>to the whole street.</h1>
+      <p class="hero-lede">Chapter &amp; Verse is a lending library run by the people who read the books. Reserve a title, meet your circle on Thursdays, pass it on when you're done.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#shelf">Browse the shelf</a>
+        <a class="btn btn-ghost" href="#circles">Find a circle</a>
+      </div>
+      <dl class="hero-stats">
+        <div><dt>Titles in rotation</dt><dd>412</dd></div>
+        <div><dt>Reading circles</dt><dd>9</dd></div>
+        <div><dt>Avg. wait</dt><dd>4 days</dd></div>
+      </dl>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="spine-stack">
+        <span class="spine s1"></span>
+        <span class="spine s2"></span>
+        <span class="spine s3"></span>
+        <span class="spine s4"></span>
+        <span class="spine s5"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="content-layout">
+
+    <article class="shelf" id="shelf" aria-labelledby="shelfHeading">
+      <div class="section-head">
+        <h2 id="shelfHeading">This week's shelf</h2>
+        <p>Tap a genre in the sidebar to narrow the stack.</p>
+      </div>
+
+      <ul class="book-grid" id="bookGrid">
+        <li class="book-card" data-genre="fiction">
+          <div class="dogear" aria-hidden="true"></div>
+          <p class="book-tag">Fiction</p>
+          <h3>The Salt Path Home</h3>
+          <p class="book-author">by Meera Ahmad</p>
+          <p class="book-note">A slow, coastal novel about starting over. Circle favourite this month.</p>
+          <button class="btn btn-reserve" type="button" data-state="available">Reserve</button>
+        </li>
+
+        <li class="book-card" data-genre="nonfiction">
+          <div class="dogear" aria-hidden="true"></div>
+          <p class="book-tag">Nonfiction</p>
+          <h3>Built From Rust</h3>
+          <p class="book-author">by Daniyal Farooq</p>
+          <p class="book-note">A short history of the city's old railway workshops.</p>
+          <button class="btn btn-reserve" type="button" data-state="available">Reserve</button>
+        </li>
+
+        <li class="book-card" data-genre="poetry">
+          <div class="dogear" aria-hidden="true"></div>
+          <p class="book-tag">Poetry</p>
+          <h3>Marginalia</h3>
+          <p class="book-author">by Naveed Raza</p>
+          <p class="book-note">Notebook poems written in the margins of other people's books.</p>
+          <button class="btn btn-reserve" type="button" data-state="available">Reserve</button>
+        </li>
+
+        <li class="book-card" data-genre="mystery">
+          <div class="dogear" aria-hidden="true"></div>
+          <p class="book-tag">Mystery</p>
+          <h3>The Ninth Ledger</h3>
+          <p class="book-author">by Osman Raza</p>
+          <p class="book-note">A missing accountant, a locked archive, one very patient detective.</p>
+          <button class="btn btn-reserve" type="button" data-state="available">Reserve</button>
+        </li>
+
+        <li class="book-card" data-genre="fiction">
+          <div class="dogear" aria-hidden="true"></div>
+          <p class="book-tag">Fiction</p>
+          <h3>Two Rivers</h3>
+          <p class="book-author">by Meera Ahmad</p>
+          <p class="book-note">Companion novel to The Salt Path Home, told from the sister's side.</p>
+          <button class="btn btn-reserve" type="button" data-state="available">Reserve</button>
+        </li>
+
+        <li class="book-card" data-genre="nonfiction">
+          <div class="dogear" aria-hidden="true"></div>
+          <p class="book-tag">Nonfiction</p>
+          <h3>Kitchen Table Economics</h3>
+          <p class="book-author">by Faiza Iqbal</p>
+          <p class="book-note">How six households budget, save, and lend to one another.</p>
+          <button class="btn btn-reserve" type="button" data-state="available">Reserve</button>
+        </li>
+      </ul>
+
+      <p class="empty-state" id="emptyState" hidden>No titles in this genre right now — check back after Thursday's swap.</p>
+    </article>
+
+    <aside class="sidebar" id="circles" aria-labelledby="sidebarHeading">
+      <div class="sidebar-card">
+        <h2 id="sidebarHeading">Filter by genre</h2>
+        <fieldset class="genre-filter">
+          <legend class="sr-only">Filter the shelf by genre</legend>
+          <label><input type="radio" name="genre" value="all" checked> All genres</label>
+          <label><input type="radio" name="genre" value="fiction"> Fiction</label>
+          <label><input type="radio" name="genre" value="nonfiction"> Nonfiction</label>
+          <label><input type="radio" name="genre" value="poetry"> Poetry</label>
+          <label><input type="radio" name="genre" value="mystery"> Mystery</label>
+        </fieldset>
+      </div>
+
+      <div class="sidebar-card">
+        <h2>Thursday circles</h2>
+        <ul class="circle-list">
+          <li><span class="dot"></span>Aliya Block — 6:30pm, Thokar</li>
+          <li><span class="dot"></span>Gulmohar Lane — 7:00pm, Awan town</li>
+          <li><span class="dot"></span>Old Market — 6:00pm, Mughalpura</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card cta-card" id="join">
+        <h2>New here?</h2>
+        <p>Bring one book, borrow one book. That's the whole membership fee.</p>
+        <a class="btn btn-primary btn-block" href="#top">Join the circle</a>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="about" id="about" aria-labelledby="aboutHeading">
+    <div class="about-inner">
+      <h2 id="aboutHeading">Why a shelf, not an app store</h2>
+      <p>Chapter &amp; Verse started as three shelves on three verandahs. We kept it small on purpose: every book here was chosen and read by someone in the circle first, and every return comes with a note in the front cover for whoever borrows it next.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-text">Chapter <em>&amp;</em> Verse</span>
+      <p>A neighborhood book circle, run by its readers.</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#shelf">Shelf</a></li>
+        <li><a href="#circles">Circles</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <address class="footer-contact">
+      <a href="tel:+918933006408">+92 304 3344876</a>
+      <a href="mailto:decodelabs.tech@gmail.com">decodelabs.tech@gmail.com</a>
+      <span>Lahore Pakistan</span>
+    </address>
+  </div>
+  <p class="footer-fine">Built for DecodeLabs Full Stack Internship — Project 1.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
